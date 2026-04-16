@@ -948,6 +948,190 @@
     margin-bottom: 4px;
   }
 
+  .research-wrap {
+    width: 100%;
+    max-width: 1280px;
+    display: grid;
+    gap: 22px;
+  }
+
+  .research-wrap h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(30px, 4.4vw, 46px);
+    line-height: 1.06;
+    font-weight: 400;
+  }
+
+  .research-wrap p {
+    max-width: 78ch;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--gray-700);
+  }
+
+  .research-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .research-card {
+    padding: 20px;
+    background: linear-gradient(180deg, #ffffff 0%, #fbfbfb 100%);
+    border: 1px solid rgba(141, 198, 63, 0.16);
+    border-radius: 18px;
+    box-shadow: 0 14px 34px rgba(17,17,17,0.05);
+  }
+
+  .research-card h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+
+  .research-card p {
+    font-size: 14px;
+    line-height: 1.62;
+    color: var(--gray-700);
+  }
+
+  .research-chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .research-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 11px;
+    border-radius: 999px;
+    background: var(--green-light);
+    color: var(--green-dark);
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  .tier {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .tier.s1 {
+    background: #eef7e0;
+    color: var(--green-dark);
+  }
+
+  .tier.s2 {
+    background: #fff6e6;
+    color: #b06b00;
+  }
+
+  .tier.s3 {
+    background: #f2f2f2;
+    color: var(--gray-700);
+  }
+
+  .wf-cart {
+    padding: 18px;
+    display: grid;
+    gap: 14px;
+    background: linear-gradient(180deg, #ffffff 0%, #fbfbfb 100%);
+  }
+
+  .wf-cart-bar {
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: var(--green-light);
+    color: var(--green-dark);
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .wf-cart-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 14px;
+  }
+
+  .wf-cart-list,
+  .wf-cart-side {
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    background: var(--white);
+    padding: 14px;
+  }
+
+  .wf-cart-item {
+    display: grid;
+    grid-template-columns: 76px 1fr auto;
+    gap: 10px;
+    align-items: center;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  .wf-cart-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .wf-cart-name {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: 3px;
+  }
+
+  .wf-cart-meta,
+  .wf-cart-price {
+    font-size: 11px;
+    color: var(--gray-500);
+  }
+
+  .wf-cart-side h4 {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 10px;
+  }
+
+  .wf-cart-check {
+    display: grid;
+    gap: 8px;
+    margin: 10px 0 12px;
+  }
+
+  .wf-cart-check div {
+    font-size: 11px;
+    color: var(--gray-700);
+  }
+
+  .wf-cart-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 11px 12px;
+    border-radius: 999px;
+    background: var(--gray-900);
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+
   .decision-table {
     width: 100%;
     border-collapse: collapse;
@@ -1079,7 +1263,9 @@
     }
 
     .measure-grid,
-    .intro-grid {
+    .intro-grid,
+    .research-grid,
+    .wf-cart-layout {
       grid-template-columns: 1fr;
       gap: 24px;
     }
@@ -1132,7 +1318,7 @@
         <div class="cover">
           <div class="eyebrow">CRO · Zwiesel Glas</div>
           <h1>Conversion Rate Optimierung</h1>
-          <p>Fünf Hebel, bei denen Aussage und Screenbeispiel direkt zusammengehören. Ziel ist keine lose Ideensammlung, sondern eine klare Präsentation mit sichtbaren Eingriffen in die Kaufreise.</p>
+          <p>Sieben priorisierte Hebel, bei denen Aussage und Screenbeispiel direkt zusammengehören. Ziel ist keine lose Ideensammlung, sondern eine klare Präsentation mit sichtbaren Eingriffen in die Kaufreise.</p>
           <div class="cover-note">Vorbereitet von active value GmbH · Meeting KW 17</div>
         </div>
       </div>
@@ -1151,16 +1337,16 @@
           <div class="intro-copy">
             <h2>Starke Marke. Zu wenig Führung in der Kaufreise.</h2>
             <p>zwiesel-glas.com ist in Bildsprache, Sortiment und Markenwirkung bereits hochwertig. Gleichzeitig bleiben entlang von Startseite, PLP und PDP mehrere Conversion-Chancen ungenutzt, weil Orientierung, Absicherung und kaufrelevante Argumente an entscheidenden Stellen nicht stark genug ausgespielt werden.</p>
-            <div class="platform-box"><strong>Ziel des Meetings:</strong> Die fünf wichtigsten CRO-Hebel priorisieren, mit bestehenden Themen abgleichen und daraus ein erstes Sprint-Paket mit konkreten Umsetzungs-Tickets ableiten.</div>
+            <div class="platform-box"><strong>Ziel des Meetings:</strong> Die sieben wichtigsten CRO-Hebel priorisieren, mit bestehenden Themen abgleichen und daraus ein erstes Sprint-Paket mit konkreten Umsetzungs-Tickets ableiten.</div>
           </div>
           <div class="intro-side">
             <div class="stat-card">
-              <div class="stat-value">5</div>
-              <div class="stat-copy">konkrete Maßnahmen mit direktem Einfluss auf Kaufklarheit, Vertrauen und Warenkorbwert</div>
+              <div class="stat-value">7</div>
+              <div class="stat-copy">priorisierte Hebel mit direktem Einfluss auf Kaufklarheit, Vertrauen und Warenkorbwert</div>
             </div>
             <div class="stat-card">
-              <div class="stat-value">3</div>
-              <div class="stat-copy">kritische Bereiche mit besonders hohem Hebel: Homepage, PLP und PDP</div>
+              <div class="stat-value">4</div>
+              <div class="stat-copy">kritische Bereiche mit besonders hohem Hebel: Homepage, PLP, PDP und Warenkorb</div>
             </div>
             <div class="stat-card">
               <div class="stat-value">1</div>
@@ -1175,6 +1361,49 @@
       <div class="topbar">
         <div class="topbar-left">
           <div class="slide-num">2</div>
+          <div class="slide-label">Was Wir Recherchiert Haben</div>
+        </div>
+        <div class="meta">Orientierung, Benchmarking und Funnel-Perspektive</div>
+      </div>
+      <div class="content">
+        <div class="research-wrap">
+          <div>
+            <h2>Die Empfehlungen basieren nicht nur auf CRO-Theorie, sondern auf Shop-, Asset- und Benchmark-Abgleich.</h2>
+            <p>Für die Schärfung der Präsentation haben wir die bestehende active-value-Logik mit dem Live-Shop von Zwiesel Glas, bereits vorhandenen Zwiesel-Assets und relevanten Premium-Benchmarks zusammengeführt. Dadurch entstehen keine abstrakten Standardhebel, sondern Empfehlungen, die direkt an der aktuellen Kaufreise von Zwiesel Fortessa anschließen.</p>
+          </div>
+          <div class="research-grid">
+            <div class="research-card">
+              <h3>Live-Shop geprüft</h3>
+              <p>Homepage, Navigation, Kategorieseiten, PDP, Geschenkbereiche, Servicekommunikation und bestehende Kaufpfade wurden entlang der realen Nutzerführung betrachtet.</p>
+            </div>
+            <div class="research-card">
+              <h3>Vorhandene Assets eingeordnet</h3>
+              <p>Gravur, Geschenkseiten, Bundles, Starter Sets, Anlasslogik und Serviceversprechen wurden als vorhandene Stärken bewertet, die systematischer ausgespielt werden können.</p>
+            </div>
+            <div class="research-card">
+              <h3>Premium-Benchmarks verglichen</h3>
+              <p>Riedel, Zalto, Villeroy &amp; Boch und Josephinenhütte wurden als Referenzen für Guided Selling, Trust-Kommunikation, Set-Logik und Geschenkarchitektur herangezogen.</p>
+            </div>
+            <div class="research-card">
+              <h3>Breite CRO-Research verdichtet</h3>
+              <p>Zusätzliche Research-Inputs zu PLP, PDP, Checkout, Cart, Vertrauen und Conversion-Friktion wurden auf ihren direkten Zwiesel-Bezug gefiltert und verdichtet.</p>
+            </div>
+          </div>
+          <div class="research-chip-row">
+            <span class="research-chip">Live-Shop</span>
+            <span class="research-chip">Bestehende Zwiesel-Assets</span>
+            <span class="research-chip">Premium-Benchmarks</span>
+            <span class="research-chip">allgemeine CRO-Research</span>
+            <span class="research-chip">Fokus auf Umsatzhebel statt Theorie</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="topbar">
+        <div class="topbar-left">
+          <div class="slide-num">3</div>
           <div class="slide-label">Maßnahme 01 · Bewertungen auf PLP und PDP</div>
         </div>
         <div class="meta">Trust direkt am Produkt</div>
@@ -1243,7 +1472,7 @@
     <section class="slide">
       <div class="topbar">
         <div class="topbar-left">
-          <div class="slide-num">3</div>
+          <div class="slide-num">4</div>
           <div class="slide-label">Maßnahme 02 · Einstiegslogik auf der Startseite</div>
         </div>
         <div class="meta">Nutzerabsicht sichtbar machen</div>
@@ -1299,23 +1528,81 @@
     <section class="slide">
       <div class="topbar">
         <div class="topbar-left">
-          <div class="slide-num">4</div>
-          <div class="slide-label">Maßnahme 03 · Benefit-Box auf der PDP</div>
+          <div class="slide-num">5</div>
+          <div class="slide-label">Maßnahme 03 · Intent Navigation und Guided Discovery</div>
+        </div>
+        <div class="meta">Kaufanlass statt bloßer Kategoriesuche</div>
+      </div>
+      <div class="content">
+        <div class="measure-grid">
+          <div class="measure-copy">
+            <span class="measure-pill">Hebel 03</span>
+            <div class="measure-sub">Anlass und Suchintention früh übersetzen</div>
+            <h2>Zwiesel bietet viele Wege, aber zu wenig Verdichtung nach Kaufmotiv.</h2>
+            <p>Im Shop sind Geschenk, Gravur, Produktarten, Serien und Ratgeber bereits vorhanden. Was fehlt, ist eine sichtbare Intent-Navigation, die Nutzer direkt von ihrem Anlass oder Kaufmotiv in einen passenden Produktpfad führt.</p>
+            <div class="premises">
+              <div class="premise"><div class="premise-dot"></div><div><strong>Wie verändern wir die Situation:</strong> Anlass-Navigation direkt im Einstieg und im Mega-Menü statt nur klassischer Kategorie-Logik.</div></div>
+              <div class="premise"><div class="premise-dot"></div><div><strong>Beispiele:</strong> Dinner zu zweit, Hochzeit, Geschenk mit Gravur, Sommer-Aperitif, Starter Set.</div></div>
+              <div class="premise"><div class="premise-dot"></div><div>Die Navigation übersetzt Motiv in Sortiment und reduziert Suchaufwand vor der eigentlichen PLP.</div></div>
+              <div class="premise"><div class="premise-dot"></div><div><strong>Sprint-Ticket:</strong> "Intent-Navigation Homepage und Menu"</div></div>
+            </div>
+          </div>
+          <div class="screen">
+            <div class="browser-bar">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <div class="browser-url">zwiesel-glas.com</div>
+            </div>
+            <div class="screen-body">
+              <div class="wf-nav">
+                <div class="wf-logo">ZWIESEL GLAS</div>
+                <div class="wf-links"><span>Weingläser</span><span>Geschenke</span><span>Gravur</span><span>Serien</span><span>Ratgeber</span></div>
+                <div class="wf-icons">🔍 &nbsp; 🛒</div>
+              </div>
+              <div style="padding:16px 18px 8px;border-bottom:1px solid var(--gray-200);">
+                <div class="wf-kicker">Wonach suchst du heute?</div>
+                <div class="research-chip-row" style="margin-top:10px;">
+                  <span class="research-chip">Dinner zu zweit</span>
+                  <span class="research-chip">Hochzeit</span>
+                  <span class="research-chip">Geschenk mit Gravur</span>
+                  <span class="research-chip">Wine Starter</span>
+                  <span class="research-chip">Sommer-Aperitif</span>
+                </div>
+                <div class="wf-callout" style="margin-top:12px;">
+                  <span class="pin">+</span>
+                  <span>Hier fehlt die Intent-Navigation.<br><em>Anlass, Geschenk und Nutzungssituation sollten direkt in Produktpfade übersetzt werden</em></span>
+                </div>
+              </div>
+              <div class="wf-teasers">
+                <div class="wf-teaser"><div class="wf-ph" style="height:86px;"></div><div class="wf-teaser-name">Dinner zu zweit</div><div class="wf-teaser-link">2er und 4er Sets</div></div>
+                <div class="wf-teaser"><div class="wf-ph" style="height:86px;"></div><div class="wf-teaser-name">Geschenk mit Gravur</div><div class="wf-teaser-link">Personalisierbar</div></div>
+                <div class="wf-teaser"><div class="wf-ph" style="height:86px;"></div><div class="wf-teaser-name">Wine Starter</div><div class="wf-teaser-link">Allrounder für zuhause</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="topbar">
+        <div class="topbar-left">
+          <div class="slide-num">6</div>
+          <div class="slide-label">Maßnahme 04 · PDP als Kaufseite mit Benefit und Reassurance</div>
         </div>
         <div class="meta">Kaufargumente vor Technik</div>
       </div>
       <div class="content">
         <div class="measure-grid">
           <div class="measure-copy">
-            <span class="measure-pill">Hebel 03</span>
+            <span class="measure-pill">Hebel 04</span>
             <div class="measure-sub">Die PDP muss zuerst Passung erklären</div>
-            <h2>Technische Daten kommen zu früh, Nutzenargumente zu spät.</h2>
-            <p>Auf der Produktdetailseite beantworten Spezifikationen viele Details, aber nicht die entscheidende Frage: Ist dieses Glas das richtige für mich? Kaufrelevante Benefits wie Einsatzzweck, Materialvorteil und Alltagstauglichkeit brauchen einen eigenen Block nahe am Add-to-Cart.</p>
+            <h2>Technische Daten kommen zu früh, Nutzenargumente und Sicherheit zu spät.</h2>
+            <p>Auf der Produktdetailseite beantworten Spezifikationen viele Details, aber nicht die entscheidende Frage: Ist dieses Glas das richtige für mich und kann ich sicher kaufen? Kaufrelevante Benefits und Serviceargumente brauchen einen eigenen Block nahe am Add-to-Cart.</p>
             <div class="premises">
               <div class="premise"><div class="premise-dot"></div><div><strong>Wie verändern wir die Situation:</strong> Benefit-Box direkt zwischen Trust-Signalen und Warenkorb-Button.</div></div>
-              <div class="premise"><div class="premise-dot"></div><div>Keine technische Wiederholung, sondern kurze, kaufrelevante Aussagen.</div></div>
+              <div class="premise"><div class="premise-dot"></div><div>Keine technische Wiederholung, sondern kurze, kaufrelevante Aussagen plus Reassurance-Zeile zu Versand, Retoure, Zahlung und Lieferzeit.</div></div>
               <div class="premise"><div class="premise-dot"></div><div>Texte je Produktgruppe pflegen, zum Beispiel nach Weintyp oder Nutzungssituation.</div></div>
-              <div class="premise"><div class="premise-dot"></div><div><strong>Sprint-Ticket:</strong> "Benefit-Box PDP-Template"</div></div>
+              <div class="premise"><div class="premise-dot"></div><div><strong>Sprint-Ticket:</strong> "PDP Benefit- und Reassurance-Modul"</div></div>
             </div>
           </div>
           <div class="screen">
@@ -1356,6 +1643,10 @@
                     <select class="wf-select"><option>2er Set</option><option>4er Set</option></select>
                     <div class="wf-atc">In den Warenkorb</div>
                   </div>
+                  <div class="wf-callout" style="margin-top:10px;">
+                    <span class="pin">+</span>
+                    <span>Diese Reassurance fehlt direkt am CTA.<br><em>Versandfrei ab 75 € · 30 Tage Retoure · Klarna / PayPal · Lieferzeit</em></span>
+                  </div>
                   <div class="wf-specs">
                     <div class="wf-spec"><span>Fassungsvermögen</span><span>368 ml</span></div>
                     <div class="wf-spec"><span>Höhe</span><span>22,3 cm</span></div>
@@ -1373,15 +1664,15 @@
     <section class="slide">
       <div class="topbar">
         <div class="topbar-left">
-          <div class="slide-num">5</div>
-          <div class="slide-label">Maßnahme 04 · Erweiterte Filter auf Kategorieseiten</div>
+          <div class="slide-num">7</div>
+          <div class="slide-label">Maßnahme 05 · Erweiterte Filter auf Kategorieseiten</div>
         </div>
         <div class="meta">Auswahl beschleunigen</div>
       </div>
       <div class="content">
         <div class="measure-grid">
           <div class="measure-copy">
-            <span class="measure-pill">Hebel 04</span>
+            <span class="measure-pill">Hebel 05</span>
             <div class="measure-sub">Filter aus der Kaufentscheidung heraus denken</div>
             <h2>Die aktuelle Filterlogik hilft beim Entscheiden kaum.</h2>
             <p>Mit einem nahezu leeren Filter bleiben Nutzer auf der PLP allein mit dem Scrollen. Gerade bei einer beratungsintensiven Kategorie wie Glas fehlt damit eine schnelle Eingrenzung nach Anlass, Kapazität, Preis oder Set-Größe.</p>
@@ -1441,15 +1732,15 @@
     <section class="slide">
       <div class="topbar">
         <div class="topbar-left">
-          <div class="slide-num">6</div>
-          <div class="slide-label">Maßnahme 05 · Serie-Vervollständigung als Cross-Sell</div>
+          <div class="slide-num">8</div>
+          <div class="slide-label">Maßnahme 06 · Serie-Vervollständigung als Cross-Sell</div>
         </div>
         <div class="meta">Warenkorbwert logisch erhöhen</div>
       </div>
       <div class="content">
         <div class="measure-grid">
           <div class="measure-copy">
-            <span class="measure-pill">Hebel 05</span>
+            <span class="measure-pill">Hebel 06</span>
             <div class="measure-sub">Cross-Sell aus der Serie statt aus Beliebigkeit</div>
             <h2>Der Cross-Sell-Block ist da, aber nicht logisch genug.</h2>
             <p>Aktuell werden Produkte ohne klaren Serienbezug und ohne erkennbaren Set-Vorteil vorgeschlagen. Nutzer bekommen damit keinen starken Impuls, ihr Set sinnvoll zu vervollständigen oder den Warenkorb bewusst auszubauen.</p>
@@ -1493,7 +1784,84 @@
     <section class="slide">
       <div class="topbar">
         <div class="topbar-left">
-          <div class="slide-num">7</div>
+          <div class="slide-num">9</div>
+          <div class="slide-label">Maßnahme 07 · Cart und Checkout-Reassurance</div>
+        </div>
+        <div class="meta">Kaufabschluss aktiv absichern</div>
+      </div>
+      <div class="content">
+        <div class="measure-grid">
+          <div class="measure-copy">
+            <span class="measure-pill">Hebel 07</span>
+            <div class="measure-sub">Servicehebel müssen im Cart arbeiten</div>
+            <h2>Warenkorb und Checkout kommunizieren Vorteile noch nicht aktiv genug.</h2>
+            <p>Zwiesel hat starke Serviceargumente wie versandkostenfrei ab 75 Euro, kostenlose Retoure und gängige Zahlungsarten. Diese Vorteile sollten nicht nur auf Service-Seiten liegen, sondern direkt im Mini-Cart und Warenkorb konversionsstark mitarbeiten.</p>
+            <div class="premises">
+              <div class="premise"><div class="premise-dot"></div><div><strong>Wie verändern wir die Situation:</strong> Versandfrei-Schwelle, Reassurance-Cluster und Geschenkoptionen werden direkt im Cart sichtbar.</div></div>
+              <div class="premise"><div class="premise-dot"></div><div>Zusätzlich passende Ergänzungen aus Serie oder Anlass statt beliebiger Cross-Sells.</div></div>
+              <div class="premise"><div class="premise-dot"></div><div>Wichtig als nächster Audit-Block: Checkout-Friktion, Gastkauf und Formularlogik separat prüfen.</div></div>
+              <div class="premise"><div class="premise-dot"></div><div><strong>Sprint-Ticket:</strong> "Cart Reassurance und Versand-Schwelle"</div></div>
+            </div>
+          </div>
+          <div class="screen">
+            <div class="browser-bar">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <div class="browser-url">zwiesel-glas.com / warenkorb</div>
+            </div>
+            <div class="screen-body">
+              <div class="wf-nav">
+                <div class="wf-logo">ZWIESEL GLAS</div>
+                <div class="wf-links"><span>Warenkorb</span><span>Versand &amp; Bezahlung</span></div>
+                <div class="wf-icons">🔒 &nbsp; 🛒</div>
+              </div>
+              <div class="wf-cart">
+                <div class="wf-cart-bar">Nur noch 11,10 € bis zum kostenlosen Versand</div>
+                <div class="wf-cart-layout">
+                  <div class="wf-cart-list">
+                    <div class="wf-cart-item">
+                      <div class="wf-ph" style="height:72px;"></div>
+                      <div>
+                        <div class="wf-cart-name">Pure Weißweinglas</div>
+                        <div class="wf-cart-meta">2er Set · Gravur optional</div>
+                      </div>
+                      <div class="wf-cart-price">17,90 €</div>
+                    </div>
+                    <div class="wf-cart-item">
+                      <div class="wf-ph" style="height:72px;"></div>
+                      <div>
+                        <div class="wf-cart-name">Pure Rotweinglas</div>
+                        <div class="wf-cart-meta">2er Set</div>
+                      </div>
+                      <div class="wf-cart-price">23,90 €</div>
+                    </div>
+                    <div class="wf-callout">
+                      <span class="pin">+</span>
+                      <span>Hier sollte der Warenkorb aktiv führen.<br><em>Versand-Schwelle, Geschenkoptionen und passende Ergänzungen statt bloßer Summenanzeige</em></span>
+                    </div>
+                  </div>
+                  <div class="wf-cart-side">
+                    <h4>Bestellübersicht</h4>
+                    <div class="wf-cart-check">
+                      <div>Versandfrei ab 75 €</div>
+                      <div>30 Tage kostenlose Retoure</div>
+                      <div>Klarna, PayPal, Kreditkarte</div>
+                      <div>DHL-Versand und Lieferzeit sichtbar</div>
+                    </div>
+                    <div class="wf-ph" style="height:46px;"></div>
+                    <div class="wf-cart-cta">Sicher zur Kasse</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="topbar">
+        <div class="topbar-left">
+          <div class="slide-num">10</div>
           <div class="slide-label">Arbeitsmodus</div>
         </div>
         <div class="meta">Aus Hebeln werden Sprints</div>
@@ -1502,7 +1870,7 @@
         <div class="intro-grid">
           <div class="intro-copy">
             <h2>Die nächste Stufe ist kein Einzelprojekt, sondern ein CRO-Rhythmus.</h2>
-            <p>Die fünf Hebel sind stark genug, um direkt in ein erstes Umsetzungsprogramm zu überführt zu werden. Damit daraus Wirkung entsteht, brauchen wir nicht nur Ideen, sondern eine wiederkehrende Logik aus Priorisierung, Umsetzung und Messung.</p>
+            <p>Die sieben Hebel sind stark genug, um direkt in ein erstes Umsetzungsprogramm überführt zu werden. Damit daraus Wirkung entsteht, brauchen wir nicht nur Ideen, sondern eine wiederkehrende Logik aus Priorisierung, Umsetzung und Messung.</p>
           </div>
           <div class="intro-side">
             <div class="stat-card">
@@ -1525,62 +1893,84 @@
     <section class="slide">
       <div class="topbar">
         <div class="topbar-left">
-          <div class="slide-num">8</div>
-          <div class="slide-label">Backlog Stufe 2</div>
+          <div class="slide-num">11</div>
+          <div class="slide-label">Priorisierung und Backlog</div>
         </div>
-        <div class="meta">Weitere CRO-Ideen mit kurzer Zielbeschreibung</div>
+        <div class="meta">Prioritätsstufen statt unstrukturierter Ideensammlung</div>
       </div>
       <div class="content">
         <div class="backlog-wrap">
-          <h2>Weitere Maßnahmen für die zweite Ausbaustufe.</h2>
-          <p>Diese Themen sind bewusst nicht im ersten Sprint-Paket, gehören aber direkt in das gemeinsame CRO-Backlog, weil sie Navigation, Orientierung und Warenkorb-Logik systematisch stärken.</p>
+          <h2>Weitere Maßnahmen werden nach Wirksamkeit und Umsetzungsnähe priorisiert.</h2>
+          <p>Nicht alle identifizierten Hebel müssen sofort umgesetzt werden. Für die Roadmap ist entscheidend, welche Themen direkt in Sprint-Tickets überführt werden, welche strukturell vorbereitet werden sollten und welche als spätere Ausbauhebel im Backlog verbleiben.</p>
           <table class="backlog-table">
             <tr>
+              <th style="width: 120px;">Priorität</th>
               <th style="width: 150px;">Bereich</th>
-              <th style="width: 290px;">Thema</th>
+              <th style="width: 270px;">Thema</th>
               <th>Ziel</th>
             </tr>
             <tr>
+              <td><span class="tier s1">Stufe 1</span></td>
+              <td><span class="backlog-area">Discovery</span></td>
+              <td><div class="backlog-topic">Glasfinder / Guided Selling</div></td>
+              <td>Ein geführter Entscheidungshelfer übersetzt Wein, Anlass und Budget in drei klare Produktpfade und reduziert Unsicherheit vor der PLP.</td>
+            </tr>
+            <tr>
+              <td><span class="tier s1">Stufe 1</span></td>
+              <td><span class="backlog-area">Navigation</span></td>
+              <td><div class="backlog-topic">Intent-Navigation im Menü</div></td>
+              <td>Anlass-, Geschenk- und Nutzungssituationen werden als direkte Pfade sichtbar und verbinden Einstieg, Geschenklogik und Sortiment.</td>
+            </tr>
+            <tr>
+              <td><span class="tier s2">Stufe 2</span></td>
               <td><span class="backlog-area">Navigation</span></td>
               <td><div class="backlog-topic">Mega-Menu in der Hauptnavigation</div></td>
               <td>Vier klar getrennte Ebenen führen Nutzer schneller in den richtigen Pfad und reduzieren Suchaufwand direkt beim Einstieg.</td>
             </tr>
             <tr>
+              <td><span class="tier s2">Stufe 2</span></td>
               <td><span class="backlog-area">PLP</span></td>
               <td><div class="backlog-topic">Sortieroptionen aktivieren</div></td>
               <td>Bestseller, höchste Bewertung und Preis aufsteigend erhöhen die Auswahlgeschwindigkeit in Kategorieseiten spürbar.</td>
             </tr>
             <tr>
+              <td><span class="tier s2">Stufe 2</span></td>
               <td><span class="backlog-area">PDP</span></td>
               <td><div class="backlog-topic">Vergleichstabelle</div></td>
               <td>Ein Overlay für alle Gläser einer Serie macht Höhe, Volumen, Weintyp und Preis pro Glas direkt vergleichbar.</td>
             </tr>
             <tr>
+              <td><span class="tier s2">Stufe 2</span></td>
               <td><span class="backlog-area">Cross-Sell</span></td>
               <td><div class="backlog-topic">Häufig zusammen gekauft</div></td>
               <td>Auf Basis realer Bestelldaten entstehen glaubwürdige Produktkombinationen wie Pure-Glas plus Dekanter.</td>
             </tr>
             <tr>
+              <td><span class="tier s1">Stufe 1</span></td>
               <td><span class="backlog-area">Warenkorb</span></td>
               <td><div class="backlog-topic">Post-Add-to-Cart Cross-Sell</div></td>
               <td>Direkt nach dem Hinzufügen zeigt der Miniwarenkorb passende Bundles oder Ergänzungen mit klarer Preislogik.</td>
             </tr>
             <tr>
+              <td><span class="tier s1">Stufe 1</span></td>
               <td><span class="backlog-area">Warenkorb</span></td>
               <td><div class="backlog-topic">Progress Bar im Minibasket</div></td>
               <td>Ein visueller Indikator bis zum kostenlosen Versand oder nächsten Set-Vorteil schafft zusätzlichen Kaufanreiz.</td>
             </tr>
             <tr>
+              <td><span class="tier s3">Stufe 3</span></td>
               <td><span class="backlog-area">PDP</span></td>
               <td><div class="backlog-topic">Sensorik-Icons</div></td>
               <td>Gewicht, Wandstärke und Klang übersetzen die haptische Wertigkeit digital und stärken die Kaufentscheidung.</td>
             </tr>
             <tr>
+              <td><span class="tier s3">Stufe 3</span></td>
               <td><span class="backlog-area">Inspiration</span></td>
               <td><div class="backlog-topic">Shoppable Moodboards</div></td>
               <td>Tisch-Szenarien bündeln mehrere Produkte in einer Szene und machen Inspiration direkt kaufbar.</td>
             </tr>
             <tr>
+              <td><span class="tier s3">Stufe 3</span></td>
               <td><span class="backlog-area">Content</span></td>
               <td><div class="backlog-topic">Story-Formate für Serien</div></td>
               <td>Mobil optimierte Landingpages für Pure und Vivid Senses verbinden Markenstory, Orientierung und direkten Kauf-CTA.</td>
@@ -1593,7 +1983,7 @@
     <section class="slide">
       <div class="topbar">
         <div class="topbar-left">
-          <div class="slide-num">9</div>
+          <div class="slide-num">12</div>
           <div class="slide-label">Nächste Schritte</div>
         </div>
         <div class="meta">Was wir heute entscheiden</div>
@@ -1610,7 +2000,7 @@
             </tr>
             <tr>
               <td class="decision-num">1</td>
-              <td>Gemeinsame Durchsicht der fünf Maßnahmen<div class="decision-note">Abgleich mit den bestehenden Themen und Schärfung der eigentlichen Prioritäten.</div></td>
+              <td>Gemeinsame Durchsicht der sieben Maßnahmen<div class="decision-note">Abgleich mit den bestehenden Themen und Schärfung der eigentlichen Prioritäten.</div></td>
               <td><span class="tag orange">Meeting KW 17</span></td>
             </tr>
             <tr>
