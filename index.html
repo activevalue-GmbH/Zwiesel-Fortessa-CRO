@@ -47,7 +47,7 @@
 
   .track {
     display: flex;
-    width: 800vw;
+    width: max-content;
     height: 100vh;
     transition: transform 0.55s cubic-bezier(0.77, 0, 0.175, 1);
   }
@@ -244,10 +244,10 @@
 
   .measure-grid {
     width: 100%;
-    max-width: 1260px;
+    max-width: 1380px;
     display: grid;
-    grid-template-columns: minmax(360px, 0.95fr) minmax(460px, 1.05fr);
-    gap: 36px;
+    grid-template-columns: minmax(320px, 0.82fr) minmax(620px, 1.18fr);
+    gap: 40px;
     align-items: center;
   }
 
@@ -317,6 +317,8 @@
     overflow: hidden;
     background: var(--white);
     box-shadow: var(--shadow);
+    transform: scale(1.03);
+    transform-origin: center;
   }
 
   .browser-bar {
@@ -737,6 +739,79 @@
     gap: 20px;
   }
 
+  .backlog-wrap {
+    width: 100%;
+    max-width: 1280px;
+  }
+
+  .backlog-wrap h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(30px, 4.4vw, 46px);
+    line-height: 1.08;
+    font-weight: 400;
+    margin-bottom: 14px;
+  }
+
+  .backlog-wrap p {
+    max-width: 72ch;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--gray-700);
+    margin-bottom: 22px;
+  }
+
+  .backlog-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-size: 14px;
+    border: 1px solid var(--gray-200);
+    background: var(--white);
+    box-shadow: var(--shadow);
+  }
+
+  .backlog-table th {
+    background: var(--green);
+    color: var(--white);
+    text-align: left;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 12px 14px;
+    font-weight: 600;
+  }
+
+  .backlog-table td {
+    padding: 13px 14px;
+    border-bottom: 1px solid var(--gray-200);
+    vertical-align: top;
+    line-height: 1.55;
+    color: var(--gray-700);
+  }
+
+  .backlog-table tr:nth-child(even) td {
+    background: #fafafa;
+  }
+
+  .backlog-area {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 9px;
+    background: var(--green-light);
+    border-radius: 999px;
+    color: var(--green-dark);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .backlog-topic {
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: 4px;
+  }
+
   .decision-table {
     width: 100%;
     border-collapse: collapse;
@@ -868,6 +943,10 @@
     .intro-grid {
       grid-template-columns: 1fr;
       gap: 24px;
+    }
+
+    .screen {
+      transform: none;
     }
 
     .wf-pdp,
@@ -1291,6 +1370,74 @@
       <div class="topbar">
         <div class="topbar-left">
           <div class="slide-num">8</div>
+          <div class="slide-label">Backlog Stufe 2</div>
+        </div>
+        <div class="meta">Weitere CRO-Ideen mit kurzer Zielbeschreibung</div>
+      </div>
+      <div class="content">
+        <div class="backlog-wrap">
+          <h2>Weitere Maßnahmen für die zweite Ausbaustufe.</h2>
+          <p>Diese Themen sind bewusst nicht im ersten Sprint-Paket, gehören aber direkt in das gemeinsame CRO-Backlog, weil sie Navigation, Orientierung und Warenkorb-Logik systematisch stärken.</p>
+          <table class="backlog-table">
+            <tr>
+              <th style="width: 150px;">Bereich</th>
+              <th style="width: 290px;">Thema</th>
+              <th>Ziel</th>
+            </tr>
+            <tr>
+              <td><span class="backlog-area">Navigation</span></td>
+              <td><div class="backlog-topic">Mega-Menu in der Hauptnavigation</div></td>
+              <td>Vier klar getrennte Ebenen führen Nutzer schneller in den richtigen Pfad und reduzieren Suchaufwand direkt beim Einstieg.</td>
+            </tr>
+            <tr>
+              <td><span class="backlog-area">PLP</span></td>
+              <td><div class="backlog-topic">Sortieroptionen aktivieren</div></td>
+              <td>Bestseller, höchste Bewertung und Preis aufsteigend erhöhen die Auswahlgeschwindigkeit in Kategorieseiten spürbar.</td>
+            </tr>
+            <tr>
+              <td><span class="backlog-area">PDP</span></td>
+              <td><div class="backlog-topic">Vergleichstabelle</div></td>
+              <td>Ein Overlay für alle Gläser einer Serie macht Höhe, Volumen, Weintyp und Preis pro Glas direkt vergleichbar.</td>
+            </tr>
+            <tr>
+              <td><span class="backlog-area">Cross-Sell</span></td>
+              <td><div class="backlog-topic">Häufig zusammen gekauft</div></td>
+              <td>Auf Basis realer Bestelldaten entstehen glaubwürdige Produktkombinationen wie Pure-Glas plus Dekanter.</td>
+            </tr>
+            <tr>
+              <td><span class="backlog-area">Warenkorb</span></td>
+              <td><div class="backlog-topic">Post-Add-to-Cart Cross-Sell</div></td>
+              <td>Direkt nach dem Hinzufügen zeigt der Miniwarenkorb passende Bundles oder Ergänzungen mit klarer Preislogik.</td>
+            </tr>
+            <tr>
+              <td><span class="backlog-area">Warenkorb</span></td>
+              <td><div class="backlog-topic">Progress Bar im Minibasket</div></td>
+              <td>Ein visueller Indikator bis zum kostenlosen Versand oder nächsten Set-Vorteil schafft zusätzlichen Kaufanreiz.</td>
+            </tr>
+            <tr>
+              <td><span class="backlog-area">PDP</span></td>
+              <td><div class="backlog-topic">Sensorik-Icons</div></td>
+              <td>Gewicht, Wandstärke und Klang übersetzen die haptische Wertigkeit digital und stärken die Kaufentscheidung.</td>
+            </tr>
+            <tr>
+              <td><span class="backlog-area">Inspiration</span></td>
+              <td><div class="backlog-topic">Shoppable Moodboards</div></td>
+              <td>Tisch-Szenarien bündeln mehrere Produkte in einer Szene und machen Inspiration direkt kaufbar.</td>
+            </tr>
+            <tr>
+              <td><span class="backlog-area">Content</span></td>
+              <td><div class="backlog-topic">Story-Formate für Serien</div></td>
+              <td>Mobil optimierte Landingpages für Pure und Vivid Senses verbinden Markenstory, Orientierung und direkten Kauf-CTA.</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="topbar">
+        <div class="topbar-left">
+          <div class="slide-num">9</div>
           <div class="slide-label">Nächste Schritte</div>
         </div>
         <div class="meta">Was wir heute entscheiden</div>
