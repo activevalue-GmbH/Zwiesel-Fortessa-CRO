@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRO Zwiesel Fortessa | active value</title>
+  <meta
+    name="description"
+    content="CRO-Unterlage für Zwiesel Fortessa im active-value-Layout mit Audit, priorisierten Hebeln, Sprint-Roadmap und nächsten Schritten."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #8dc63f;
+      --green-dark: #648f1b;
+      --green-light: #f0f7e6;
+      --green-soft: #dff0bc;
+      --forest: #243217;
+      --ink: #1b1f19;
+      --text: #394036;
+      --muted: #697163;
+      --line: #d8ddd1;
+      --surface: #ffffff;
+      --surface-alt: #f7f8f4;
+      --warm: #c96f1d;
+      --warm-light: #fff6ec;
+      --danger: #b63c2f;
+      --danger-light: #fcebe7;
+      --shadow: 0 18px 40px rgba(19, 29, 12, 0.08);
+      --radius: 22px;
+      --radius-sm: 14px;
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Barlow", sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(141, 198, 63, 0.18), transparent 28%),
+        linear-gradient(180deg, #fbfcf8 0%, #f4f6ef 100%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .shell {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(251, 252, 248, 0.88);
+      border-bottom: 1px solid rgba(216, 221, 209, 0.7);
+    }
+
+    .header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 18px 0;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--green-dark);
+    }
+
+    .brand strong {
+      font-family: "Poppins", sans-serif;
+      font-size: 18px;
+      color: var(--ink);
+    }
+
+    .meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--forest);
+      background: rgba(141, 198, 63, 0.14);
+      border: 1px solid rgba(141, 198, 63, 0.35);
+    }
+
+    .hero {
+      padding: 56px 0 28px;
+    }
+
+    .hero-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.9fr);
+      gap: 28px;
+      padding: 36px;
+      background: #ffffff;
+      border: 1px solid rgba(216, 221, 209, 0.88);
+      border-radius: 32px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-copy h1 {
+      font-family: "Poppins", sans-serif;
+      font-size: clamp(34px, 4.5vw, 56px);
+      line-height: 1.06;
+      color: var(--ink);
+      margin: 10px 0 16px;
+      max-width: 12ch;
+      text-wrap: balance;
+    }
+
+    .hero-copy p {
+      max-width: 62ch;
+      color: var(--text);
+      font-size: 18px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      font-weight: 600;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    .button-primary {
+      color: #fff;
+      background: var(--green);
+      box-shadow: 0 12px 24px rgba(100, 143, 27, 0.25);
+    }
+
+    .button-secondary {
+      color: var(--forest);
+      background: #fff;
+      border: 1px solid rgba(100, 113, 99, 0.22);
+    }
+
+    .hero-panel,
+    .stat-list,
+    .premises,
+    .priority-stack,
+    .simulation-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .hero-note,
+    .hero-stats,
+    .card,
+    .score-box,
+    .phase,
+    .topic-card,
+    .sim-box,
+    .summary-box {
+      background: var(--surface-alt);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+
+    .hero-note h2,
+    .hero-stats h2,
+    .card h3,
+    .phase h3,
+    .topic-card h4,
+    .sim-q,
+    .summary-box h3 {
+      font-family: "Poppins", sans-serif;
+      color: var(--ink);
+    }
+
+    .stat {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .stat-value {
+      font-family: "Poppins", sans-serif;
+      font-size: 24px;
+      color: var(--green-dark);
+      line-height: 1;
+    }
+
+    .section-nav {
+      padding: 14px 0 6px;
+    }
+
+    .section-nav ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .section-nav a {
+      display: block;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: #ffffff;
+      border: 1px solid rgba(216, 221, 209, 0.85);
+      color: var(--ink);
+      font-weight: 600;
+      box-shadow: 0 10px 24px rgba(27, 31, 25, 0.04);
+    }
+
+    main {
+      padding: 22px 0 72px;
+    }
+
+    .section {
+      margin-top: 34px;
+      background: #ffffff;
+      border: 1px solid rgba(216, 221, 209, 0.88);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .section-inner {
+      padding: 34px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      padding-bottom: 18px;
+      margin-bottom: 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      color: var(--green-dark);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .section-kicker span {
+      display: inline-flex;
+      width: 30px;
+      height: 30px;
+      border-radius: 10px;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      background: var(--green);
+    }
+
+    .section-head h2 {
+      font-family: "Poppins", sans-serif;
+      font-size: clamp(26px, 4vw, 36px);
+      line-height: 1.1;
+      color: var(--ink);
+      max-width: 16ch;
+    }
+
+    .section-head p,
+    .card p,
+    .topic-card p,
+    .phase li,
+    .sim-before,
+    .sim-after,
+    .small,
+    .summary-box p {
+      font-size: 14.5px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .insight {
+      margin-bottom: 28px;
+      padding: 18px 20px;
+      border-left: 4px solid var(--green);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      background: var(--green-light);
+    }
+
+    .insight strong {
+      color: var(--forest);
+    }
+
+    .grid-2,
+    .grid-3,
+    .score-grid,
+    .topic-grid,
+    .summary-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-2,
+    .summary-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-3,
+    .topic-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .score-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin-bottom: 22px;
+    }
+
+    .label,
+    .topic-cat,
+    .phase-meta,
+    .priority-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .value {
+      color: var(--ink);
+      font-size: 17px;
+      line-height: 1.45;
+    }
+
+    .score-box {
+      text-align: center;
+      background: #fff;
+    }
+
+    .score-val {
+      font-family: "Poppins", sans-serif;
+      font-size: 30px;
+      color: var(--ink);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .score-val.danger {
+      color: var(--danger);
+    }
+
+    .score-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .status-card,
+    .premise,
+    .priority-card {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .status-icon,
+    .bullet {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      background: var(--green);
+      flex-shrink: 0;
+    }
+
+    .status-card.warn,
+    .premise.warn,
+    .priority-card.warn {
+      background: var(--warm-light);
+      border-color: rgba(201, 111, 29, 0.18);
+    }
+
+    .status-card.warn .status-icon,
+    .priority-card.warn .bullet,
+    .tag.warn,
+    .score-pill.mid {
+      background: var(--warm);
+    }
+
+    .status-card.crit {
+      background: var(--danger-light);
+      border-color: rgba(182, 60, 47, 0.18);
+    }
+
+    .status-card.crit .status-icon,
+    .tag.bad,
+    .score-pill.bad {
+      background: var(--danger);
+    }
+
+    .premise {
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: var(--surface-alt);
+      border: 1px solid var(--line);
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-top: 8px;
+      background: var(--green);
+    }
+
+    .premise.warn .dot {
+      background: var(--warm);
+    }
+
+    .priority-card {
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: #fff;
+      border: 1px solid var(--line);
+    }
+
+    .priority-card .bullet {
+      background: var(--forest);
+    }
+
+    .priority-card strong {
+      color: var(--ink);
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 24px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    thead th {
+      text-align: left;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--forest);
+      padding: 14px 16px;
+    }
+
+    tbody td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    tbody tr:nth-child(even) td {
+      background: rgba(247, 248, 244, 0.88);
+    }
+
+    tbody tr.highlight td {
+      background: var(--green-light);
+    }
+
+    .score-pill,
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 32px;
+      padding: 0 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .score-pill.good,
+    .tag.ok {
+      background: var(--green);
+    }
+
+    .phase {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 18px;
+      margin-bottom: 16px;
+    }
+
+    .phase-num {
+      font-family: "Poppins", sans-serif;
+      font-size: 28px;
+      color: var(--green-dark);
+      line-height: 1;
+      min-width: 40px;
+    }
+
+    .phase ul {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .phase li {
+      position: relative;
+      padding-left: 16px;
+    }
+
+    .phase li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--green-dark);
+    }
+
+    .topic-card {
+      background: #fff;
+    }
+
+    .topic-cat {
+      color: var(--green-dark);
+    }
+
+    .sim-box {
+      background: #fff;
+    }
+
+    .sim-q {
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    .sim-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .sim-before,
+    .sim-after {
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+    }
+
+    .sim-before {
+      background: var(--danger-light);
+      border-color: rgba(182, 60, 47, 0.18);
+      color: #7e332a;
+    }
+
+    .sim-after {
+      background: var(--green-light);
+      border-color: rgba(100, 143, 27, 0.18);
+      color: var(--forest);
+    }
+
+    .sim-before strong,
+    .sim-after strong {
+      display: block;
+      font-family: "Poppins", sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .sim-before strong {
+      color: var(--danger);
+    }
+
+    .sim-after strong {
+      color: var(--green-dark);
+    }
+
+    .footer {
+      padding: 0 0 48px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-bar {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 22px 0 0;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 980px) {
+      .hero-card,
+      .grid-2,
+      .grid-3,
+      .topic-grid,
+      .score-grid,
+      .summary-grid,
+      .section-nav ul,
+      .sim-row {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        align-items: start;
+      }
+
+      .section-head h2 {
+        max-width: none;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .header-row,
+      .footer-bar {
+        flex-direction: column;
+        align-items: start;
+      }
+
+      .meta {
+        justify-content: flex-start;
+      }
+
+      .hero {
+        padding-top: 28px;
+      }
+
+      .hero-card,
+      .section-inner {
+        padding: 22px;
+      }
+
+      .hero-copy p {
+        font-size: 17px;
+      }
+
+      thead th,
+      tbody td {
+        min-width: 180px;
+      }
+    }
+
+    @media print {
+      .site-header,
+      .hero-actions,
+      .section-nav {
+        display: none;
+      }
+
+      body {
+        background: #fff;
+        font-size: 12px;
+      }
+
+      .section,
+      .hero-card {
+        box-shadow: none;
+        border: 1px solid #ccc;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-row">
+      <div class="brand">
+        <span class="eyebrow">CRO · Zwiesel Fortessa</span>
+        <strong>Conversion Rate Optimierung</strong>
+      </div>
+      <div class="meta">
+        <span class="badge">Meeting KW 17</span>
+        <span class="badge">April 2026 · Vertraulich</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="shell">
+    <section class="hero">
+      <div class="hero-card">
+        <div class="hero-copy">
+          <div class="eyebrow">Vorbereitet von active value GmbH</div>
+          <h1>Mehr Conversion aus einer bereits starken Marke</h1>
+          <p>
+            Der Shop von Zwiesel Fortessa ist visuell hochwertig und markenseitig
+            überzeugend. Gleichzeitig bleiben entlang der Kaufreise mehrere
+            Conversion-Chancen ungenutzt. Diese Seite verdichtet die wichtigsten
+            Hebel in ein klares CRO-Arbeitsbild.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#massnahmen">Zu den priorisierten Hebeln</a>
+            <a class="button button-secondary" href="#naechste-schritte">Zu den nächsten Schritten</a>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <article class="hero-note">
+            <h2>Ziel des Meetings</h2>
+            <p>
+              Die wichtigsten CRO-Maßnahmen gemeinsam priorisieren, mit bestehenden
+              Themen abgleichen und daraus ein erstes Sprintpaket für die Umsetzung
+              ableiten.
+            </p>
+          </article>
+          <article class="hero-stats">
+            <h2>Audit auf einen Blick</h2>
+            <div class="stat-list">
+              <div class="stat">
+                <div class="stat-value">5</div>
+                <div>konkrete Hebel mit direktem Einfluss auf Kaufentscheidung und Warenkorb</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value">3</div>
+                <div>Bereiche mit besonders hohem Impact: Startseite, PLP und PDP</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value">8-12</div>
+                <div>Wochen für ein erstes belastbares CRO-Test- und Rollout-Paket</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <nav class="section-nav" aria-label="Seitennavigation">
+      <ul>
+        <li><a href="#warum">1. Ausgangslage</a></li>
+        <li><a href="#analyse">2. Audit</a></li>
+        <li><a href="#massnahmen">3. Hebel</a></li>
+        <li><a href="#naechste-schritte">4. Nächste Schritte</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="section" id="warum">
+        <div class="section-inner">
+          <div class="section-head">
+            <div>
+              <div class="section-kicker"><span>1</span> Ausgangslage</div>
+              <h2>Starker Markenauftritt, aber zu wenig Führung in der Kaufreise</h2>
+            </div>
+            <p>
+              Die vorhandene Shop-Qualität ist kein Branding-Problem. Die größte
+              Lücke liegt darin, dass Nutzer an mehreren Stellen zu wenig Orientierung,
+              Absicherung und Entscheidungshilfe bekommen.
+            </p>
+          </div>
+
+          <div class="insight">
+            <strong>Der zentrale CRO-Befund:</strong> Zwiesel Fortessa inspiriert gut,
+            priorisiert aber zu wenig. Gerade Nutzer mit konkreter Kaufabsicht
+            brauchen früher sichtbare Hinweise, warum ein Produkt passt und was sie
+            als Nächstes tun sollten.
+          </div>
+
+          <div class="summary-grid">
+            <article class="summary-box">
+              <h3>Was bereits stark ist</h3>
+              <p>
+                Markenbild, Produktästhetik, Sortimentstiefe und die hochwertige
+                Gesamtanmutung schaffen Vertrauen und unterstreichen den Premiumanspruch.
+              </p>
+            </article>
+            <article class="summary-box">
+              <h3>Wo Conversion verloren geht</h3>
+              <p>
+                Soziale Beweise fehlen, Einstiege sind nicht nach Nutzungsabsicht
+                priorisiert und auf Produktseiten kommen rationale und emotionale
+                Benefits zu spät.
+              </p>
+            </article>
+          </div>
+
+          <div class="grid-3" style="margin-top: 24px;">
+            <article class="card status-card warn">
+              <div class="status-icon">1</div>
+              <div>
+                <div class="label">Startseite</div>
+                <div class="value">Inspiration ohne klare Einstiegslogik</div>
+                <p>Wer gezielt kaufen will, muss sich seinen Weg selbst erschließen. Das kostet Orientierung und damit Conversion.</p>
+              </div>
+            </article>
+            <article class="card status-card crit">
+              <div class="status-icon">2</div>
+              <div>
+                <div class="label">PLP / PDP</div>
+                <div class="value">Bewertungen und Proof fehlen sichtbar</div>
+                <p>Ohne Sterne, Rezensionen oder Nutzungskontext fehlt ein zentrales Vertrauen signal direkt am Produkt.</p>
+              </div>
+            </article>
+            <article class="card status-card warn">
+              <div class="status-icon">3</div>
+              <div>
+                <div class="label">Produktentscheidung</div>
+                <div class="value">Benefits kommen nach technischen Daten</div>
+                <p>Die entscheidende Frage "Ist dieses Glas richtig für mich?" wird zu spät beantwortet.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="analyse">
+        <div class="section-inner">
+          <div class="section-head">
+            <div>
+              <div class="section-kicker"><span>2</span> Audit</div>
+              <h2>Die größte Wirkung liegt in wenigen, klaren Entscheidungen</h2>
+            </div>
+            <p>
+              Das CRO-Potenzial verteilt sich nicht gleichmäßig. Einige wenige
+              Maßnahmen greifen direkt in zentrale Entscheidungs- und
+              Reibungsmomente der Nutzerreise ein.
+            </p>
+          </div>
+
+          <div class="score-grid">
+            <div class="score-box">
+              <div class="score-val">01</div>
+              <div class="score-label">Homepage-Logik</div>
+            </div>
+            <div class="score-box">
+              <div class="score-val danger">02</div>
+              <div class="score-label">Proof am Produkt</div>
+            </div>
+            <div class="score-box">
+              <div class="score-val">03</div>
+              <div class="score-label">Kaufargumente</div>
+            </div>
+            <div class="score-box">
+              <div class="score-val">04</div>
+              <div class="score-label">Warenkorb-Logik</div>
+            </div>
+          </div>
+
+          <div class="insight">
+            <strong>Wichtig für die Priorisierung:</strong> Nicht jede Optimierung muss
+            sofort getestet werden. Die ersten Sprints sollten dort ansetzen, wo
+            Entscheidungssicherheit und Relevanz spürbar steigen, ohne die Plattform
+            unnötig komplex zu machen.
+          </div>
+
+          <div class="table-wrap">
+            <table aria-label="Priorisierte CRO-Hebel">
+              <thead>
+                <tr>
+                  <th>Hebel</th>
+                  <th>Beobachtung heute</th>
+                  <th>Wirkung auf Conversion</th>
+                  <th>Priorität</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="highlight">
+                  <td>Bewertungen auf PLP und PDP</td>
+                  <td>Keine sichtbaren Sterne und keine Rezensionen</td>
+                  <td>Mehr Vertrauen direkt am Produkt und weniger Unsicherheit vor dem Kauf</td>
+                  <td><span class="score-pill bad">Sehr hoch</span></td>
+                </tr>
+                <tr>
+                  <td>Nutzertypen-Einstieg auf der Homepage</td>
+                  <td>Inspirativ, aber ohne Priorisierung nach Absicht</td>
+                  <td>Schnellerer Einstieg in relevante Produktwelten</td>
+                  <td><span class="score-pill good">Hoch</span></td>
+                </tr>
+                <tr>
+                  <td>Benefit-Box auf der PDP</td>
+                  <td>Technik vor Nutzenargumentation</td>
+                  <td>Bessere Passungskommunikation vor dem Add-to-Cart</td>
+                  <td><span class="score-pill good">Hoch</span></td>
+                </tr>
+                <tr>
+                  <td>Cross-Sell im Warenkorb</td>
+                  <td>Zusatzverkäufe werden nicht aktiv geführt</td>
+                  <td>Höherer Warenkorbwert bei passender Ergänzung</td>
+                  <td><span class="score-pill mid">Mittel</span></td>
+                </tr>
+                <tr>
+                  <td>Schnellere Orientierung auf Kategorieseiten</td>
+                  <td>Filter und Produktlogik nicht offensiv genug genutzt</td>
+                  <td>Weniger Suchaufwand, schnellere Auswahl</td>
+                  <td><span class="score-pill mid">Mittel</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="simulation-list" style="margin-top: 28px;">
+            <div class="sim-box">
+              <p class="sim-q">Ich suche ein Glas als Geschenk und will schnell sicher sein, dass es passt.</p>
+              <div class="sim-row">
+                <div class="sim-before">
+                  <strong>Heute</strong>
+                  Die Startseite inspiriert, führt aber nicht direkt in einen passenden Geschenk- oder Gravurpfad.
+                </div>
+                <div class="sim-after">
+                  <strong>Nach CRO</strong>
+                  Ein klarer Nutzertypen-Einstieg leitet sofort in die relevante Produktwelt und senkt Suchaufwand.
+                </div>
+              </div>
+            </div>
+            <div class="sim-box">
+              <p class="sim-q">Ich bin kurz vor dem Kauf, will aber noch eine letzte Bestätigung.</p>
+              <div class="sim-row">
+                <div class="sim-before">
+                  <strong>Heute</strong>
+                  Es fehlen Bewertungen, Erfahrungswerte und eine kompakte Nutzenargumentation direkt am Produkt.
+                </div>
+                <div class="sim-after">
+                  <strong>Nach CRO</strong>
+                  Sterne, Review-Auszüge und eine Benefit-Box liefern genau die Sicherheit, die den Abschluss wahrscheinlicher macht.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="massnahmen">
+        <div class="section-inner">
+          <div class="section-head">
+            <div>
+              <div class="section-kicker"><span>3</span> Hebel</div>
+              <h2>Fünf Maßnahmen mit direkter Wirkung auf die Conversion</h2>
+            </div>
+            <p>
+              Die Hebel sind bewusst so formuliert, dass daraus ohne Strategieverlust
+              direkt Sprint-Tickets und Test-Hypothesen abgeleitet werden können.
+            </p>
+          </div>
+
+          <div class="priority-stack">
+            <article class="priority-card">
+              <div class="bullet">1</div>
+              <div>
+                <div class="priority-label">Sehr hohe Priorität</div>
+                <p><strong>Bewertungen auf PLP und PDP ausspielen:</strong> Sterne, Anzahl und ein ausformulierter Review-Bereich schließen die sichtbarste Vertrauenslücke im Shop.</p>
+              </div>
+            </article>
+            <article class="priority-card">
+              <div class="bullet">2</div>
+              <div>
+                <div class="priority-label">Hohe Priorität</div>
+                <p><strong>Einstiegslogik auf der Homepage schärfen:</strong> Drei Nutzertypen-Kacheln wie Weinliebhaber, Alltag und Bar sowie Geschenke und Gravur führen Nutzer schneller in relevante PLPs.</p>
+              </div>
+            </article>
+            <article class="priority-card">
+              <div class="bullet">3</div>
+              <div>
+                <div class="priority-label">Hohe Priorität</div>
+                <p><strong>Benefit-Box auf der PDP ergänzen:</strong> Einsatzzweck, Materialvorteile und Pflegehinweise müssen vor oder neben technischen Spezifikationen sichtbar werden.</p>
+              </div>
+            </article>
+            <article class="priority-card">
+              <div class="bullet">4</div>
+              <div>
+                <div class="priority-label">Mittlere Priorität</div>
+                <p><strong>Cross-Sell entlang des Kaufmoments stärken:</strong> Passende Ergänzungen, Serienlogik und Geschenkoptionen sollten am Warenkorb und unterhalb der PDP konsequent angespielt werden.</p>
+              </div>
+            </article>
+            <article class="priority-card">
+              <div class="bullet">5</div>
+              <div>
+                <div class="priority-label">Mittlere Priorität</div>
+                <p><strong>Kategorieseiten stärker führen:</strong> Produktkarten, Filter und Sortierung müssen die Nutzerabsicht sichtbarer machen, statt nur Produkte aufzulisten.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="grid-2" style="margin-top: 24px;">
+            <article class="card">
+              <h3>Was wir zuerst umsetzen würden</h3>
+              <div class="premises" style="margin-top: 14px;">
+                <div class="premise"><div class="dot"></div><div>Review-Integration auf PLP und PDP mit sichtbarem Sterne-Rating</div></div>
+                <div class="premise"><div class="dot"></div><div>Homepage-Modul mit drei Einstiegswegen nach Nutzungsabsicht</div></div>
+                <div class="premise"><div class="dot"></div><div>Benefit-Box als kaufrelevanter Argumentationsblock auf der PDP</div></div>
+              </div>
+            </article>
+            <article class="card">
+              <h3>Was wir bewusst danach ziehen würden</h3>
+              <div class="premises" style="margin-top: 14px;">
+                <div class="premise warn"><div class="dot"></div><div>Feinjustierung von Sortierung, Filter-Defaults und Teaser-Logik</div></div>
+                <div class="premise warn"><div class="dot"></div><div>Cross-Sell-Varianten für Warenkorb und Produktdetailseite</div></div>
+                <div class="premise warn"><div class="dot"></div><div>Erweiterte Testlogik für Geschenk- und Bundle-Mechaniken</div></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="naechste-schritte">
+        <div class="section-inner">
+          <div class="section-head">
+            <div>
+              <div class="section-kicker"><span>4</span> Nächste Schritte</div>
+              <h2>Von der Unterlage in ein erstes Sprintpaket</h2>
+            </div>
+            <p>
+              Aus dieser Seite sollte direkt ein umsetzbarer Arbeitsmodus entstehen:
+              priorisieren, verantworten, bauen und anschließend gezielt messen.
+            </p>
+          </div>
+
+          <article class="phase">
+            <div class="phase-num">01</div>
+            <div>
+              <div class="phase-meta">Woche 1</div>
+              <h3>Priorisieren und Scope final schärfen</h3>
+              <ul>
+                <li>Top-3-Maßnahmen für Sprint 1 verbindlich festlegen.</li>
+                <li>Abgleich mit bestehenden Themen und technischen Abhängigkeiten.</li>
+                <li>Definition der ersten Erfolgsmetriken pro Maßnahme.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="phase">
+            <div class="phase-num">02</div>
+            <div>
+              <div class="phase-meta">Woche 2 bis 5</div>
+              <h3>Umsetzung des ersten CRO-Pakets</h3>
+              <ul>
+                <li>Review-Integration, Homepage-Einstieg und Benefit-Box technisch und inhaltlich umsetzen.</li>
+                <li>Tracking für Sichtbarkeit, Klickpfade und Add-to-Cart-Verhalten absichern.</li>
+                <li>Staging-Review mit Blick auf mobile Nutzung und Kaufreise durchführen.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="phase" style="margin-bottom: 0;">
+            <div class="phase-num">03</div>
+            <div>
+              <div class="phase-meta">Woche 6 bis 12</div>
+              <h3>Rollout, Messung und nächste Welle</h3>
+              <ul>
+                <li>Ergebnisse bewerten und Folgehebel für PLP, Warenkorb und Cross-Sell priorisieren.</li>
+                <li>Weitere Hypothesen in Test- oder Rollout-Backlog überführen.</li>
+                <li>CRO als wiederkehrenden Arbeitsmodus statt Einzelmaßnahme verankern.</li>
+              </ul>
+            </div>
+          </article>
+
+          <div class="topic-grid" style="margin-top: 24px;">
+            <article class="topic-card">
+              <div class="topic-cat">Sprint-Ticket</div>
+              <h4>Review-Integration PLP und PDP</h4>
+              <p>System auswählen, Darstellungsorte definieren und erste Seed-Logik für Reviews klären.</p>
+            </article>
+            <article class="topic-card">
+              <div class="topic-cat">Sprint-Ticket</div>
+              <h4>Nutzertypen-Kacheln Homepage</h4>
+              <p>Drei direkte Einstiege entwickeln und mit vorkonfigurierten Produktlisten verbinden.</p>
+            </article>
+            <article class="topic-card">
+              <div class="topic-cat">Sprint-Ticket</div>
+              <h4>Benefit-Box Produktdetailseite</h4>
+              <p>Inhaltliche Logik, Positionierung und visuelle Ausgestaltung vor dem Add-to-Cart definieren.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-bar">
+        <div>active value GmbH · CRO-Unterlage für Zwiesel Fortessa</div>
+        <div>GitHub-Pages-ready · Stand April 2026</div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
