@@ -485,6 +485,54 @@
     background: var(--white);
   }
 
+  .guided-discovery-slide .measure-grid {
+    gap: 28px;
+    align-items: start;
+  }
+
+  .guided-discovery-slide .measure-copy {
+    gap: 14px;
+    padding: 24px 24px 22px;
+  }
+
+  .guided-discovery-slide .measure-copy h2 {
+    font-size: clamp(28px, 4vw, 46px);
+    line-height: 1.04;
+    margin-bottom: 10px;
+  }
+
+  .guided-discovery-slide .measure-copy p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .guided-discovery-slide .premises {
+    gap: 6px;
+  }
+
+  .guided-discovery-slide .premise {
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 10px 12px;
+  }
+
+  .guided-discovery-slide .screen {
+    transform: scale(0.98);
+    transform-origin: center top;
+  }
+
+  .guided-discovery-slide .wf-teaser {
+    padding: 10px;
+  }
+
+  .guided-discovery-slide .wf-teaser-name {
+    font-size: 12px;
+  }
+
+  .guided-discovery-slide .wf-teaser-link {
+    font-size: 11px;
+  }
+
   .wf-nav {
     display: flex;
     align-items: center;
@@ -1325,7 +1373,7 @@
       </div>
     </section>
 
-    <section class="slide">
+    <section class="slide guided-discovery-slide">
       <div class="topbar">
         <div class="topbar-left">
           <div class="slide-num">1</div>
@@ -1471,13 +1519,13 @@
         <div class="measure-grid">
           <div class="measure-copy">
             <span class="measure-pill">Hebel 02</span>
-            <div class="measure-sub">Unsicherheit aktiv in Auswahl übersetzen</div>
-            <h2>Intent- und Anlasslogik ist vorhanden, wird aber noch nicht als zentrale Shortcut-Schicht ausgespielt.</h2>
-            <p>Im Shop sind Geschenk, Gravur, Produktarten, Serien und Ratgeber bereits vorhanden. Was zusätzlich noch nicht sichtbar genug gebündelt ist, ist eine Guided-Discovery-Logik, die diese vorhandenen Signale zusammenführt und unsichere Nutzer aktiv von Anlass, Weintyp oder Nutzungssituation zu einem passenden Set oder einer passenden Serie führt.</p>
+            <div class="measure-sub">Eine Ebene tiefer als die großen Homepage-Shortcuts</div>
+            <h2>Viele Kaufanlässe. Noch zu wenig schnelle Wege in den passenden Pfad.</h2>
+            <p>Zwiesel hat ein vielschichtiges Angebot, bietet Nutzern aber noch keinen kompakten zweiten Orientierungsschritt an, der kleinere Intents schnell auffängt. Nach den großen Homepage-Shortcuts sollte deshalb eine zweite Ebene folgen, die konkrete Kaufanlässe direkt in passende Landingpages, PLPs oder Beratungsstrecken übersetzt.</p>
             <div class="premises">
-              <div class="premise"><div class="premise-dot"></div><div><strong>Wie verändern wir die Situation:</strong> Ein geführter Entscheidungshelfer übersetzt wenige Fragen direkt in konkrete Produktpfade.</div></div>
-              <div class="premise"><div class="premise-dot"></div><div><strong>Beispiele:</strong> Dinner zu zweit, Hochzeit, Geschenk mit Gravur, Sommer-Aperitif, Wine Starter.</div></div>
-              <div class="premise"><div class="premise-dot"></div><div>Der Glasfinder ergänzt die Navigation und reduziert Suchaufwand vor der eigentlichen PLP oder PDP.</div></div>
+              <div class="premise"><div class="premise-dot"></div><div><strong>Position im Funnel:</strong> Als zweite Orientierungsebene auf der Startseite, direkt unter den großen Shortcuts.</div></div>
+              <div class="premise"><div class="premise-dot"></div><div><strong>Format:</strong> Klickbare Anlässe oder Intents wie Dinner zu zweit, Hochzeit, Geschenk mit Gravur oder Sommer-Aperitif.</div></div>
+              <div class="premise"><div class="premise-dot"></div><div><strong>Ziel:</strong> Direkte Weiterleitung in vorkuratierte Landingpages, PLPs oder eine kurze Beratungsstrecke statt in einen zusätzlichen Navigationspunkt.</div></div>
               <div class="premise"><div class="premise-dot"></div><div><strong>Sprint-Ticket:</strong> "Glasfinder / Guided Discovery MVP"</div></div>
             </div>
           </div>
@@ -1503,7 +1551,7 @@
                 </div>
                 <div class="wf-callout" style="margin-top:12px;">
                   <span class="pin">+</span>
-                    <span>Hier fehlt die gebündelte Shortcut-Logik.<br><em>Wenige Fragen sollten direkt in passende Sets, Serien oder PLPs führen</em></span>
+                    <span>Hier fehlt die zweite Orientierungsebene.<br><em>Kleinere Kaufanlässe sollten direkt in kuratierte Pfade führen</em></span>
                 </div>
               </div>
                 <div class="wf-teasers">
